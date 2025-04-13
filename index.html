@@ -732,8 +732,8 @@
             /* Speakers Grid - 4x2 */
             .speakers-grid {
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 30px;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 20px;
                 width: 100%;
                 padding: 0 40px;
             }
@@ -743,8 +743,8 @@
             }
 
             .speakers-grid .team-member img {
-                width: 200px;
-                height: 200px;
+                width: 150px;
+                height: 150px;
                 margin: 0 auto;
             }
 
@@ -773,7 +773,10 @@
             }
 
             /* Remove existing column classes effects for these sections */
-            #speaker .col-sm-3,
+            #speaker .col-sm-2 {
+                width: auto;
+                padding: 0;
+            }
             #organization .col-sm-2 {
                 width: auto;
                 padding: 0;
@@ -791,14 +794,6 @@
             <br>
 
             <div class="speakers-grid">
-                <div class="team-member">
-                    <img src="./files_new/JK.jpg" class="img-responsive img-circle">
-                    <a href="https://jeankossaifi.com/">
-                        <h4>Jean Kossaifi</h4>
-                    </a>
-                    <p class="text-muted">NVIDIA Researchy</p>
-                </div>
-
                 <div class="team-member">
                     <img src="./files_new/XC.jpg" class="img-responsive img-circle">
                     <a href="https://jungyhuk.github.io/">
@@ -822,13 +817,37 @@
                     </a>
                     <p class="text-muted">Stanford University</p>
                 </div>
+    
+                <div class="team-member">
+                    <img src="./files_new/JK.jpg" class="img-responsive img-circle">
+                    <a href="https://jeankossaifi.com/">
+                        <h4>Jean Kossaifi</h4>
+                    </a>
+                    <p class="text-muted">NVIDIA Research</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./files_new/GL.png" class="img-responsive img-circle">
+                    <a href="https://ghli.org/">
+                        <h4>Guohao Li</h4>
+                    </a>
+                    <p class="text-muted">CAMEL-AI</p>
+                </div>
 
                 <div class="team-member">
                     <img src="./files_new/RS.jpg" class="img-responsive img-circle">
                     <a href="https://www.comp.nus.edu.sg/~reza/">
                         <h4>Reza Shokri</h4>
                     </a>
-                    <p class="text-muted">National University of Singapore Microsoft</p>
+                    <p class="text-muted">National University of Singapore; Microsoft</p>
+                </div>
+            
+                <div class="team-member">
+                    <img src="./files_new/ls.png" class="img-responsive img-circle">
+                    <a href="https://dasongle.github.io//">
+                        <h4>Le Song</h4>
+                    </a>
+                    <p class="text-muted">GenBio AI; MBZUAI</p>
                 </div>
 
                 <div class="team-member">
@@ -844,7 +863,7 @@
                     <a href="https://yuandong-tian.com/">
                         <h4>Yuandong Tian</h4>
                     </a>
-                    <p class="text-muted">Meta AI Research</p>
+                    <p class="text-muted">Meta AI</p>
                 </div>
 
                 <div class="team-member">
@@ -916,7 +935,7 @@
                     <a href="https://junlinhan.github.io/">
                         <h4>Junlin Han</h4>
                     </a>
-                    <p class="text-muted">University of Oxford Meta AI</p>
+                    <p class="text-muted">University of Oxford; Meta AI</p>
                 </div>
 
                 <div class="team-member">
