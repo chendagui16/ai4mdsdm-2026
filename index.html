@@ -8,7 +8,8 @@
     <title>AIMS@ICLR2026 Workshop</title>
 
     <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwindcss.js"></script>
+<!--    <script src="https://cdn.tailwindcss.com"></script>-->
     <style>
         /* Custom Configuration for Typography and General Styles */
         html {
@@ -25,7 +26,7 @@
         #main-header {
             /* 恢复原始背景图路径 */
             background-image: url('images/Basic/bg.png');
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             position: relative;
             padding: 8rem 0 6rem;
@@ -87,35 +88,56 @@
 <body id="page-top" class="antialiased">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-40 bg-white shadow-lg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <!-- Brand (Requirement 1) -->
-                <div class="flex items-center">
-                    <a class="text-2xl font-extrabold text-[#2c5282] tracking-tight" href="#page-top">
-                        AIMS@ICLR2026
-                    </a>
+<!-- Navigation -->
+<nav class="sticky top-0 z-40 bg-white shadow-lg">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <!-- Brand -->
+            <div class="flex items-center">
+                <a class="text-xl sm:text-2xl font-extrabold text-[#2c5282] tracking-tight truncate" href="#page-top">
+                    AIMS@ICLR2026
+                </a>
+            </div>
+
+            <!-- Desktop Nav Links (Hidden on mobile) -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                    <a href="#news" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">News</a>
+                    <a href="#introduction" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="#call" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">CFP</a>
+                    <a href="#program" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
+                    <a href="#speaker" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Speakers</a>
+                    <a href="#organization" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Organizers</a>
+                    <a href="#Sponsor" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
                 </div>
+            </div>
 
-                <!-- Nav Links -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#news" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">News</a>
-                        <a href="#introduction" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#call" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Call for Papers</a>
-                        <a href="#program" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
-                        <a href="#speaker" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Invited Speakers</a>
-                        <a href="#organization" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Organizers</a>
-                        <a href="#Sponsor" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Button (omitted for brevity, assume responsive menu component in a real app) -->
-
+            <!-- Mobile Menu Button (Visible on mobile) -->
+            <div class="-mr-2 flex md:hidden">
+                <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Icon for menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
         </div>
-    </nav>
+    </div>
 
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#news" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">News</a>
+            <a href="#introduction" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="#call" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Call for Papers</a>
+            <a href="#program" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Schedule</a>
+            <a href="#speaker" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Invited Speakers</a>
+            <a href="#organization" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Organizers</a>
+            <a href="#Sponsor" class="text-gray-700 hover:bg-gray-50 hover:text-[#2c5282] block px-3 py-2 rounded-md text-base font-medium">Sponsors</a>
+        </div>
+    </div>
+</nav>
     <!-- Header (Requirement 2 & 3) -->
     <header id="main-header" class="text-white text-center">
         <div class="container mx-auto px-4">
